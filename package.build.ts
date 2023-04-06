@@ -76,7 +76,7 @@ const selectionDecorationType = {
 // Package information
 // ============================================================================
 
-const version = "0.5.13",
+const version = "0.0.1",
       preRelease = 1;
 
 export const pkg = (modules: Builder.ParsedModule[]) => ({
@@ -84,26 +84,26 @@ export const pkg = (modules: Builder.ParsedModule[]) => ({
   // Common package.json properties.
   // ==========================================================================
 
-  name: "dancehelix-local",
-  description: "Fork of Dance with helix keybindings (Unfinished)",
+  name: "HelixCode",
+  description: "Emulation of Helix for VSCode (Unfinished)",
   version,
-  license: "ISC",
+  license: "GPL-3.0-or-later",
 
   author: {
-    name: "Leo",
-    email: "le.lueker@gmail.com",
+    name: "Zhimu",
+    email: "fengzhimu@outlook.com",
   },
 
   repository: {
     type: "git",
-    url: "https://github.com/Silverquark/dance.git",
+    url: "https://github.com/LifeWorks/HelixCode.git",
   },
 
   main: "./out/src/extension.js",
   browser: "./out/web/extension.js",
 
   engines: {
-    vscode: "^1.63.0",
+    vscode: "^1.77.0",
   },
 
   scripts: {
@@ -126,7 +126,7 @@ export const pkg = (modules: Builder.ParsedModule[]) => ({
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "^17.0.33",
-    "@types/vscode": "^1.63.0",
+    "@types/vscode": "^1.77.0",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "@vscode/test-electron": "^2.1.3",
@@ -149,20 +149,20 @@ export const pkg = (modules: Builder.ParsedModule[]) => ({
   // VS Code-specific properties.
   // ==========================================================================
 
-  displayName: "Dance - Helix Alpha",
-  publisher: "strackeror",
+  displayName: "HelixCode",
+  publisher: "LifeWorks",
   categories: ["Keymaps", "Other"],
   readme: "README.md",
-  icon: "assets/dance.png",
+  icon: "assets/HelixCode.png",
 
   activationEvents: ["*"],
   extensionKind: ["ui", "workspace"],
 
-  // Dance-specific properties.
+  // HelixCode-specific properties.
   // ==========================================================================
-
-  // The two properties below can be set when distributing Dance to ensure it
-  // cannot execute arbitrary code (with `dance.run`) or system commands (with
+  // Need to change the name of dance to helix
+  // The two properties below can be set when distributing HelixCode to ensure it
+  // cannot execute arbitrary code (with `HelixCode.run`) or system commands (with
   // `dance.selections.{filter,pipe}`).
   "dance.disableArbitraryCodeExecution": false,
   "dance.disableArbitraryCommandExecution": false,
